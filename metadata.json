@@ -1,0 +1,6 @@
+{
+  "name": "CivicLink Ghana & Ghost Door Admin",
+  "description": "Integrated Ghanaian civic reporting (Civiconnect), Ghana Card authentication, geofenced multi-agency queue management (DVLA, Passport, Police, Health), and stealth Municipal & Super Admin Web Portal with dual-verification geofencing and live dispatch.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

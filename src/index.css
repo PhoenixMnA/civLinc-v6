@@ -1,0 +1,298 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #050608;
+    --bg-surface: #0e1118;
+    --bg-elevated: #12151e;
+    --text-primary: #cbd5e1;
+    --text-heading: #ffffff;
+    --text-muted: #94a3b8;
+    --border-subtle: rgba(255, 255, 255, 0.1);
+  }
+
+  html.light {
+    --bg-primary: #FFFDF2;
+    --bg-surface: #FFFFFF;
+    --bg-elevated: #F9F7EC;
+    --text-primary: #2d3340;
+    --text-heading: #14171f;
+    --text-muted: #64748b;
+    --border-subtle: rgba(180, 140, 60, 0.2);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Light Theme Overrides: Faint Ivory/Warm Cream Yellow Palette (#FFFDF2) */
+html.light {
+  background-color: #FFFDF2 !important;
+  color: #2d3340 !important;
+}
+
+html.light body {
+  background-color: #FFFDF2 !important;
+  color: #2d3340 !important;
+}
+
+/* Background mappings for Light Theme */
+html.light .bg-\[\#050608\],
+html.light .bg-\[\#090b10\],
+html.light .bg-\[\#07090e\],
+html.light .bg-\[\#0a0c12\],
+html.light .bg-\[\#0a0d14\]\/80,
+html.light .bg-\[\#090b11\]\/92 {
+  background-color: #FFFDF2 !important;
+}
+
+html.light .bg-\[\#0e1118\],
+html.light .bg-\[\#0e111a\],
+html.light .bg-\[\#0e121b\],
+html.light .bg-\[\#0b0e14\] {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(180, 140, 60, 0.08) !important;
+}
+
+html.light .bg-\[\#12151e\],
+html.light .bg-\[\#11141c\],
+html.light .bg-\[\#161922\],
+html.light .bg-\[\#181c28\] {
+  background-color: #F8F6EB !important;
+}
+
+html.light .bg-\[\#0d0f15\]\/90 {
+  background-color: #F4F1DE !important;
+}
+
+/* Border mappings for Light Theme */
+html.light .border-white\/10,
+html.light .border-white\/15,
+html.light .border-white\/5 {
+  border-color: rgba(180, 140, 60, 0.22) !important;
+}
+
+/* Text color mappings for Light Theme */
+html.light .text-white {
+  color: #14171f !important;
+}
+html.light .text-gray-200,
+html.light .text-gray-300 {
+  color: #2d3340 !important;
+}
+html.light .text-gray-400 {
+  color: #5d6474 !important;
+}
+html.light .text-gray-500 {
+  color: #7a8294 !important;
+}
+
+/* Text color mappings for Dark Theme */
+html.dark .text-white,
+html:not(.light) .text-white {
+  color: #ffffff !important;
+}
+
+/* Digital Pass Ticket Number - Targeted Styling */
+#digital-pass-ticket-number {
+  border-color: #15151e !important;
+  color: #d9d9d9 !important;
+}
+
+html.dark #digital-pass-ticket-number,
+html:not(.light) #digital-pass-ticket-number {
+  border-color: #15151e !important;
+  color: #d9d9d9 !important;
+}
+
+html.light #digital-pass-ticket-number {
+  border-color: #15151e !important;
+  color: #d9d9d9 !important;
+}
+
+/* Live Ticket Call Notice Button - Black on Light Mode */
+#ticket-call-broadcast-btn,
+div#root > div > main > div:first-child > button {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+html.light #ticket-call-broadcast-btn,
+html.light div#root > div > main > div:first-child > button,
+html.light div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1) {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+html.light #ticket-call-broadcast-btn:hover,
+html.light div#root > div > main > div:first-child > button:hover {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+html.dark #ticket-call-broadcast-btn,
+html:not(.light) #ticket-call-broadcast-btn {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+html.dark #ticket-call-broadcast-btn:hover,
+html:not(.light) #ticket-call-broadcast-btn:hover {
+  background-color: #f3f4f6 !important;
+  color: #000000 !important;
+}
+
+/* Ghana Patriotic Flag Consistency in Light Theme */
+html.light .bg-\[\#CE1126\] {
+  background-color: #CE1126 !important;
+  color: #ffffff !important;
+}
+html.light .bg-\[\#CE1126\] * {
+  color: #ffffff !important;
+}
+html.light .text-\[\#CE1126\] {
+  color: #CE1126 !important;
+}
+html.light .bg-\[\#006B3F\] {
+  background-color: #006B3F !important;
+  color: #ffffff !important;
+}
+html.light .bg-\[\#006B3F\] * {
+  color: #ffffff !important;
+}
+html.light .text-emerald-400,
+html.light .text-emerald-300 {
+  color: #006B3F !important;
+}
+html.light .text-\[\#FCD116\] {
+  color: #9E7400 !important; /* Deep readable gold on ivory */
+}
+html.light .bg-\[\#FCD116\] {
+  background-color: #FCD116 !important;
+  color: #000000 !important;
+}
+html.light .bg-\[\#FCD116\] * {
+  color: #000000 !important;
+}
+
+/* Input Fields in Light Mode */
+html.light input,
+html.light select,
+html.light textarea {
+  background-color: #FFFFFF !important;
+  color: #14171f !important;
+  border-color: rgba(180, 140, 60, 0.3) !important;
+}
+html.light input:focus,
+html.light select:focus,
+html.light textarea:focus {
+  border-color: #9E7400 !important;
+  outline-color: #9E7400 !important;
+}
+
+/* Immersive UI Custom Scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #050608;
+}
+
+html.light .custom-scrollbar::-webkit-scrollbar-track {
+  background: #FFFDF2;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+html.light .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.4);
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.88; transform: scale(1.01); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, rgba(17, 20, 27, 0.8) 25%, rgba(30, 37, 50, 0.8) 50%, rgba(17, 20, 27, 0.8) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Immersive glow drops */
+.glow-indigo {
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.25);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+}
+
+.glow-rose {
+  box-shadow: 0 0 20px rgba(244, 63, 94, 0.2);
+}
+
+/* Global mobile overflow prevention & responsive touch behavior */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/* Leaflet Basemap Filter & Custom Container Styling */
+.leaflet-container {
+  font-family: inherit;
+  background-color: #090b10 !important;
+  outline: none;
+}
+
+.leaflet-tile-dark {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7) !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(9, 11, 16, 0.85) !important;
+  color: #9ca3af !important;
+  font-size: 9px !important;
+  padding: 2px 6px !important;
+  border-top-left-radius: 6px;
+  backdrop-filter: blur(4px);
+}
+.leaflet-control-attribution a {
+  color: #FCD116 !important;
+}
+
+.civic-custom-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
